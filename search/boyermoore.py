@@ -2,10 +2,8 @@ def find(substring, string):
 
 	#Preprocessing
 	bad_char = get_char_table(substring)
-	#print("Char table: {0}".format(bad_char))
 
-
-	#Assuming match as false
+	#Assuming match is false
 	matched = False
 	current_index = len(substring) - 1
 
@@ -24,8 +22,6 @@ def find(substring, string):
 		else:
 			shift = bad_char['*']
 
-		#print("Shifting by {0}".format(shift))
-
 		#Adjust index
 		current_index += shift
 
@@ -35,8 +31,6 @@ def find(substring, string):
 			success = False
 
 		#Update matched
-		#print("Trying index {0}".format(current_index))
-		
 		matched = matches(substring, string, current_index)
 
 	if success:
