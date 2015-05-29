@@ -9,8 +9,6 @@ class Key(object):
 		with open(self.filename, 'rb') as datafile:
 			self.raw_data = datafile.read()
 
-		counter = 0
-
 
 	def get_index(self, data):
 

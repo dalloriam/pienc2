@@ -1,5 +1,5 @@
-from key import Key
-from reader import FileReader
+from encoding.key import Key
+from encoding.reader import FileReader
 
 def encode(file_path, out_path):
 
