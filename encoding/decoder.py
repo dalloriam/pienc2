@@ -4,6 +4,9 @@ import os
 
 def decode(file_path, out_path):
 
+	if out_path == "":
+		out_path = file_path.replace('.pi', '')
+
 	print("Generating array from encryption key...")
 	encryption_key = Key('data/pi.dat')
 
