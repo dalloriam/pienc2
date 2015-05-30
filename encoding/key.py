@@ -1,15 +1,13 @@
 import math
 from search import boyermoore
 from encoding import cache
+import pi
 
 class Key(object):
 
 	def __init__(self, filename):
 		self.filename = filename
-		print self.filename
-
-		with open(self.filename, 'rb') as datafile:
-			self.raw_data = datafile.read()
+		self.raw_data = pi.key
 
 		self.cache = cache.Cache()
 

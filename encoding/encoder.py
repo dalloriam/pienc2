@@ -28,7 +28,7 @@ def encode(file_path, out_path):
 
 		pointer_array.append(encryption_key.get_index(item))
 
-		if counter % 10 == 0:
+		if counter % 1000 == 0:
 			print("{0}/{1}".format(counter, max_length))
 		counter += 1
 
