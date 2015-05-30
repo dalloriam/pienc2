@@ -7,9 +7,9 @@ import time
 def timer(func):
 
 	def wrapper(*arg):
-		t = time.clock()
+		t = time.time()
 		res = func(*arg)
-		print func.func_name, time.clock()-t
+		print("--- %s seconds ---" % (time.time() - t))
 		return res
 
 	return wrapper

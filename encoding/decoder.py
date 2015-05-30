@@ -1,5 +1,6 @@
 from key import Key
 import base64
+import os
 
 def decode(file_path, out_path):
 
@@ -25,3 +26,5 @@ def decode(file_path, out_path):
 			b64string += b'='* missing_padding
 
 		outfile.write(base64.decodestring(b64string))
+
+	os.remove('cache.db')

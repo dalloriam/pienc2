@@ -1,6 +1,8 @@
 from encoding.key import Key
 from encoding.reader import FileReader
 
+import os
+
 def encode(file_path, out_path):
 
 	print("Generating array from encryption key...")
@@ -29,3 +31,5 @@ def encode(file_path, out_path):
 	print("Dumping encrypted file...")
 	with open(out_path, 'a') as outfile:
 		outfile.write(','.join(pointer_array))
+
+	os.remove('cache.db')
